@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrendNova Daily – Trending Tech, Deals, AI & Money Tips</title>
+<meta name="description" content="What's trending now: Black Friday & Cyber Monday deal guides, AI tools, new gadgets, gaming, streaming, online safety and smart money tips.">
+<style>
+:root{--bg:#0a0b10;--card:#12141c;--card2:#181b26;--line:#272c3b;--text:#eef0f6;--muted:#9ba3b6;--a:#ff4d6d;--b:#ff9f1c;--c:#4cc9f0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding-bottom:72px}
+a{color:var(--c);text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+/* header */
+.ticker{background:linear-gradient(90deg,var(--a),var(--b));color:#111;font-size:13px;font-weight:700;text-align:center;padding:6px 10px}
+header{position:sticky;top:0;z-index:50;background:rgba(10,11,16,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.02em}
+.logo span{color:var(--a)}
+.nav nav{display:flex;gap:18px;font-size:14px;overflow-x:auto}
+.nav nav a{color:var(--text);white-space:nowrap}
+.btn{display:inline-block;background:var(--a);color:#fff;padding:9px 16px;border-radius:10px;font-weight:700;font-size:14px;border:0;cursor:pointer}
+.btn.alt{background:var(--card2);border:1px solid var(--line);color:var(--text)}
+/* ad slots */
+.slot{border:1px dashed var(--line);border-radius:12px;background:rgba(255,255,255,.02);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;color:var(--muted);font-size:12px;overflow:hidden;max-width:100%}
+.slot b{display:block;color:var(--text);font-size:11px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px}
+.sc{display:flex;justify-content:center;margin:14px 0}
+.s728{width:728px;min-height:90px}.s468{width:468px;min-height:60px}.s300{width:300px;min-height:250px}.s160x600{width:160px;min-height:600px}.s160x300{width:160px;min-height:300px}.s320{width:320px;min-height:50px}.s300x600{width:300px;min-height:600px}
+.native{min-height:110px;width:100%}
+/* hero */
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:6px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.badge{display:inline-block;font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px;background:var(--a);color:#fff;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}
+h1{font-size:clamp(26px,4.6vw,42px);line-height:1.12;margin-bottom:10px}
+h2{font-size:clamp(20px,3vw,26px);margin-bottom:6px}
+h3{font-size:17px;margin-bottom:6px;line-height:1.3}
+p{color:var(--muted);font-size:15px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.count div{background:var(--card2);border:1px solid var(--line);border-radius:12px;text-align:center;padding:10px 4px}
+.count b{display:block;font-size:26px;color:var(--b)}
+.count span{font-size:11px;color:var(--muted);text-transform:uppercase}
+.trend-list{list-style:none;counter-reset:t;display:grid;gap:10px}
+.trend-list li{counter-increment:t;display:flex;gap:10px;align-items:flex-start;font-size:14px}
+.trend-list li::before{content:counter(t);background:var(--a);color:#fff;font-weight:800;width:24px;height:24px;border-radius:7px;display:grid;place-items:center;flex:none;font-size:13px}
+.trend-list a{color:var(--text);font-weight:600}
+/* layout */
+.layout{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.card .cat{font-size:11px;font-weight:800;color:var(--b);text-transform:uppercase;letter-spacing:.05em}
+.card ul,.card ol{margin:8px 0 0 18px;font-size:14px;color:var(--muted)}
+.full{grid-column:1/-1}
+.sidebar{display:flex;flex-direction:column;gap:14px;align-items:center}
+.sticky-side{position:sticky;top:76px}
+section.block{margin-top:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--text)}
+.fmtgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.stickybar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(18,20,28,.97);border-top:1px solid var(--line);min-height:56px;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted)}
+footer{margin-top:30px;padding:24px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center}
+footer a{margin:0 8px}
+@media(max-width:980px){.hero,.layout{grid-template-columns:1fr}.sidebar{flex-direction:row;flex-wrap:wrap;justify-content:center}.sticky-side{position:static}.s728,.s468{width:320px;min-height:50px}.s160x600,.s160x300{display:none}}
+@media(max-width:640px){.cards,.fmtgrid{grid-template-columns:1fr}.nav nav{display:none}}
+.lv-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+.lv-card{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:14px}
+.lv-card h3{font-size:15px;margin-bottom:8px}
+.lv-card ul{list-style:none;display:grid;gap:10px;margin:0}
+.lv-card li a{color:var(--text);font-weight:600;font-size:14px;line-height:1.35;display:block}
+.lv-card li a:hover{text-decoration:underline}
+.lv-card small{color:var(--muted);font-size:12px}
+.lv-time{font-size:12px;color:var(--muted);margin-top:10px}
+@media(max-width:700px){.lv-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="ticker" id="ticker">🔥 Black Friday is Nov 27 &amp; Cyber Monday is Nov 30, 2026 – our deal-hunting guide is below</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Trend<span>Nova</span> Daily</div>
+    <nav><a href="#deals">Deals</a><a href="#ai">AI</a><a href="#gadgets">Gadgets</a><a href="#gaming">Gaming</a><a href="#streaming">Streaming</a><a href="#safety">Safety</a><a href="#money">Money</a></nav>
+    <a class="btn smartlink" href="#" target="_blank" rel="noopener sponsored">Top Offers</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- AD 1: TOP BANNER -->
+  <div class="sc"><div class="slot s728" data-ad="Top Banner 728×90 / 320×50" id="ad-top"></div></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="panel">
+      <span class="badge" id="ev-badge">Trending now</span>
+      <h1 id="ev-title">Black Friday 2026: How to Find Real Deals (Not Fake Discounts)</h1>
+      <p id="ev-blurb">Sales are already live at major retailers. Here's a simple playbook to compare prices, avoid fake "was" prices and stack savings before the main event.</p>
+      <div class="count" id="countdown">
+        <div><b id="cd-d">--</b><span>Days</span></div>
+        <div><b id="cd-h">--</b><span>Hours</span></div>
+        <div><b id="cd-m">--</b><span>Mins</span></div>
+        <div><b id="cd-s">--</b><span>Secs</span></div>
+      </div>
+      <p style="font-size:13px" id="cd-note">Countdown to Black Friday (Nov 27, 2026).</p>
+      <div class="cta">
+        <a class="btn" href="#deals">Read Deal Guide</a>
+        <a class="btn alt smartlink" href="#" target="_blank" rel="noopener sponsored">See Today's Offers</a>
+      </div>
+    </div>
+    <div class="panel">
+      <h2 style="font-size:19px">🔥 Trending Today</h2>
+      <ol class="trend-list" style="margin-top:12px">
+        <li><a href="#deals" id="ev-trend">Early Black Friday deals: what's worth buying</a></li>
+        <li><a href="#ai">New AI tools &amp; assistants worth trying</a></li>
+        <li><a href="#gadgets">Foldable phones &amp; smart-home gadgets</a></li>
+        <li><a href="#safety">Account takeover scams: how to stay safe</a></li>
+        <li><a href="#streaming">Best streaming picks this week</a></li>
+        <li><a href="#money">Smart holiday budgeting tips</a></li>
+      </ol>
+      <!-- AD 2: NATIVE HERO -->
+      <div class="slot native" style="margin-top:14px" data-ad="Native Banner (above the fold)" id="ad-native-hero"></div>
+    </div>
+  </div>
+
+  <!-- AD 3: MID BANNER -->
+  <div class="sc"><div class="slot s728" data-ad="Banner 728×90 / 320×50" id="ad-mid1"></div></div>
+
+  <div class="layout">
+    <div>
+      <!-- ================= LIVE DEALS (auto-updated) ================= -->
+      <section class="block panel" id="live">
+        <h2>🔥 Live Deals &amp; Trending Now</h2>
+        <p id="live-sub">Loading the latest offers…</p>
+        <div class="lv-grid" id="lv-deals"></div>
+        <div class="slot native" style="margin-top:14px" data-ad="Live Section Native 1" id="ad-live-1"></div>
+        <div class="lv-grid" id="lv-news"></div>
+        <div class="slot native" style="margin-top:14px" data-ad="Live Section Native 2" id="ad-live-2"></div>
+        <div class="lv-time" id="lv-time"></div>
+      </section>
+
+      <!-- ================= DEALS ================= -->
+      <section class="block" id="deals">
+        <h2 id="ev-sec-title">🛒 Black Friday Deal Guide</h2>
+        <p id="ev-sec-intro">Retailers like Amazon, Best Buy, Walmart and others start discounts weeks early, so you don't need to wait for a single day.</p>
+        <div class="cards" style="margin-top:12px">
+          <div class="card">
+            <span class="cat">Strategy</span>
+            <h3>5 Rules to Avoid Fake Discounts</h3>
+            <ol>
+              <li>Check price history with a tracker before you buy.</li>
+              <li>Compare at least 3 retailers.</li>
+              <li>Ignore "was" prices; look at the final price.</li>
+              <li>Read recent reviews, not just star ratings.</li>
+              <li>Check the return policy and the return window.</li>
+            </ol>
+          </div>
+          <div class="card">
+            <span class="cat">Categories</span>
+            <h3 id="ev-tips-title">What Usually Gets the Biggest Cuts</h3>
+            <ul id="ev-tips">
+              <li>TVs and monitors</li>
+              <li>Laptops and tablets</li>
+              <li>Headphones and speakers</li>
+              <li>Smart home and robot vacuums</li>
+              <li>Older-generation phones and wearables</li>
+            </ul>
+          </div>
+          <div class="slot native full" data-ad="In-Feed Native 1" id="ad-feed1"></div>
+          <div class="card full">
+            <span class="cat">Money-saving</span>
+            <h3>Stack Your Savings the Smart Way</h3>
+            <p>Combine store sales with cashback portals, card offers and coupon codes. Set a hard budget first and write your shopping list so impulse buys don't eat your savings.</p>
+            <div class="chips"><span class="chip">Cashback</span><span class="chip">Price tracking</span><span class="chip">Gift card promos</span><span class="chip">Price match</span><span class="chip">Free shipping</span></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="sc"><div class="slot s300" data-ad="Banner 300×250" id="ad-300a"></div></div>
+
+      <!-- ================= AI ================= -->
+      <section class="block" id="ai">
+        <h2>🤖 AI Tools Everyone's Talking About</h2>
+        <p>AI assistants, coding helpers and creative tools keep shipping updates. Here's how to pick one without wasting money.</p>
+        <div class="cards" style="margin-top:12px">
+          <div class="card">
+            <span class="cat">How-to</span>
+            <h3>How to Choose an AI Assistant</h3>
+            <ul>
+              <li>Decide your main use: writing, coding, research or images.</li>
+              <li>Start with free tiers and test with your real tasks.</li>
+              <li>Check privacy settings and data-retention options.</li>
+              <li>Only upgrade if you hit the limits regularly.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="cat">Privacy</span>
+            <h3>Is Deleting an AI Chat Really Deleting It?</h3>
+            <p>Researchers have shown that traces of local AI app data can sometimes be recovered. Use the app's delete and history-off settings, and avoid pasting passwords or private documents.</p>
+          </div>
+          <div class="card full">
+            <span class="cat">Productivity</span>
+            <h3>5 Everyday Tasks AI Can Speed Up</h3>
+            <div class="chips"><span class="chip">Email drafts</span><span class="chip">Meeting summaries</span><span class="chip">Study notes</span><span class="chip">Spreadsheet formulas</span><span class="chip">Trip planning</span></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="sc"><div class="slot s468" data-ad="Banner 468×60" id="ad-468a"></div></div>
+
+      <!-- ================= GADGETS ================= -->
+      <section class="block" id="gadgets">
+        <h2>📱 Gadgets &amp; Smart Home</h2>
+        <p>Foldable phones, new wearables and Matter-compatible smart home devices are all in the news.</p>
+        <div class="cards" style="margin-top:12px">
+          <div class="card">
+            <span class="cat">Buying guide</span>
+            <h3>Should You Buy a Foldable Phone?</h3>
+            <ul>
+              <li>Check the crease and hinge durability reviews.</li>
+              <li>Compare water-resistance ratings.</li>
+              <li>Look at the software-update promise.</li>
+              <li>Consider last year's model on sale.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="cat">Smart home</span>
+            <h3>Why "Matter" Support Matters</h3>
+            <p>Matter-compatible devices work across major smart-home platforms, so you're less locked into one brand. Look for the Matter logo when buying plugs, lights and sensors.</p>
+          </div>
+          <div class="slot native full" data-ad="In-Feed Native 2" id="ad-feed2"></div>
+        </div>
+      </section>
+
+      <div class="cards" style="margin-top:14px">
+        <div class="sc" style="margin:0"><div class="slot s300" data-ad="Banner 300×250 B" id="ad-300b"></div></div>
+        <div class="sc" style="margin:0"><div class="slot s300" data-ad="Banner 300×250 C" id="ad-300c"></div></div>
+      </div>
+
+      <!-- ================= GAMING ================= -->
+      <section class="block" id="gaming">
+        <h2>🎮 Gaming Corner</h2>
+        <div class="cards" style="margin-top:12px">
+          <div class="card">
+            <span class="cat">Tips</span>
+            <h3>Get Better FPS Without Buying New Hardware</h3>
+            <ol>
+              <li>Update your GPU drivers.</li>
+              <li>Lower shadows and ray-tracing first.</li>
+              <li>Close background apps and overlays.</li>
+              <li>Use an SSD for game installs.</li>
+            </ol>
+          </div>
+          <div class="card">
+            <span class="cat">Deals</span>
+            <h3>Where Gaming Deals Show Up</h3>
+            <p>Console bundles, controllers, headsets and monitors are common sale items. Digital storefront sales often run alongside Black Friday week.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="sc"><div class="slot s728" data-ad="Banner 728×90 / 320×50 (mid 2)" id="ad-mid2"></div></div>
+
+      <!-- ================= STREAMING ================= -->
+      <section class="block" id="streaming">
+        <h2>📺 Streaming &amp; Entertainment</h2>
+        <div class="cards" style="margin-top:12px">
+          <div class="card">
+            <span class="cat">Save money</span>
+            <h3>Cut Your Streaming Bill</h3>
+            <ul>
+              <li>Rotate subscriptions instead of paying for all at once.</li>
+              <li>Watch for holiday promo bundles.</li>
+              <li>Choose ad-supported tiers if you don't mind ads.</li>
+              <li>Share family plans where allowed by the terms.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="cat">Weekend</span>
+            <h3>How to Build a Watchlist You'll Actually Finish</h3>
+            <p>Pick one series and one movie per week, set a start time, and remove anything you don't finish in 3 episodes.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SAFETY ================= -->
+      <section class="block" id="safety">
+        <h2>🔐 Online Safety</h2>
+        <p>Account-takeover scams are rising. These steps block most attacks.</p>
+        <div class="cards" style="margin-top:12px">
+          <div class="card">
+            <span class="cat">Must-do</span>
+            <h3>Lock Down Your Accounts in 10 Minutes</h3>
+            <ol>
+              <li>Turn on two-factor authentication (app-based if possible).</li>
+              <li>Use a password manager with unique passwords.</li>
+              <li>Set up passkeys where offered.</li>
+              <li>Review logged-in devices and remove unknown ones.</li>
+            </ol>
+          </div>
+          <div class="card">
+            <span class="cat">Scam alert</span>
+            <h3>Spotting Fake Holiday Deals</h3>
+            <ul>
+              <li>Too-good-to-be-true prices on unknown stores.</li>
+              <li>Urgent countdown timers with no real brand.</li>
+              <li>Payment requests by gift card or transfer.</li>
+              <li>Misspelled domains and missing contact info.</li>
+            </ul>
+          </div>
+          <div class="slot native full" data-ad="In-Feed Native 3" id="ad-feed3"></div>
+          <div class="card full">
+            <span class="cat">VPN</span>
+            <h3>Do You Need a VPN on Public Wi-Fi?</h3>
+            <p>A reputable VPN encrypts your traffic on shared networks. Choose a provider with a clear no-logs policy and independent audits, and avoid free VPNs that monetize your data.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="sc"><div class="slot s468" data-ad="Banner 468×60 B" id="ad-468b"></div></div>
+
+      <!-- ================= MONEY ================= -->
+      <section class="block" id="money">
+        <h2>💰 Smart Money for the Holidays</h2>
+        <div class="cards" style="margin-top:12px">
+          <div class="card">
+            <span class="cat">Budget</span>
+            <h3>A Simple Holiday Budget That Works</h3>
+            <ol>
+              <li>Total up gifts, travel, food and events.</li>
+              <li>Set a spending cap per category.</li>
+              <li>Use a separate account or card for holiday spending.</li>
+              <li>Track every purchase for 30 days.</li>
+            </ol>
+          </div>
+          <div class="card">
+            <span class="cat">Cards &amp; credit</span>
+            <h3>Use Credit Cards Wisely</h3>
+            <p>Rewards are only worth it if you pay the full balance. Carrying a balance costs far more than any cashback you earn.</p>
+          </div>
+        </div>
+        <p style="font-size:12px;margin-top:10px">This content is for general information only and is not financial advice.</p>
+      </section>
+
+      <!-- AD FORMAT SHOWCASE -->
+      <section class="block panel" id="partners">
+        <h2>Partner Offers</h2>
+        <p>Sponsored placements. Paste your Adsterra code into each slot.</p>
+        <div class="fmtgrid">
+          <div class="slot" style="min-height:110px" data-ad="Popunder trigger (fires on user click)" id="ad-popunder"></div>
+          <div class="slot" style="min-height:110px" data-ad="Native Banner" id="ad-native-partner"></div>
+          <div class="slot" style="min-height:110px" data-ad="Social Bar (inline backup)" id="ad-social-inline"></div>
+          <div class="slot" style="min-height:110px"><b>Smartlink</b><a class="btn smartlink" href="#" target="_blank" rel="noopener sponsored">Open Offer</a></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+      <div class="slot s300" data-ad="Sidebar 300×250" id="ad-side-300"></div>
+      <div class="slot s300x600" data-ad="Sidebar 300×600" id="ad-side-600"></div>
+      <div class="slot s160x600" data-ad="160×600" id="ad-160x600"></div>
+      <div class="slot s160x300" data-ad="160×300" id="ad-160x300"></div>
+      <div class="sticky-side"><div class="slot s300" data-ad="Sticky Sidebar 300×250" id="ad-side-sticky"></div></div>
+    </aside>
+  </div>
+
+  <!-- BOTTOM ADS -->
+  <div class="sc"><div class="slot s728" data-ad="Bottom Banner 728×90 / 320×50" id="ad-bottom"></div></div>
+  <div class="slot native" data-ad="Bottom Native Banner" id="ad-native-bottom"></div>
+
+</main>
+
+<footer class="wrap">
+  <div><a href="#">About</a><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Contact</a><a href="#">Disclosure</a></div>
+  <p style="margin-top:8px">© <span id="yr"></span> TrendNova Daily. Contains advertisements and affiliate links. Information is general in nature; check dates and prices with retailers.</p>
+</footer>
+
+<!-- STICKY SOCIAL BAR -->
+<div class="stickybar" id="ad-sticky-social">Sticky Social Bar container – paste script here</div>
+
+<script>
+/* ============ CONFIG: put your Adsterra values here ============ */
+var SMARTLINK_URL = "";   // your Smartlink URL
+var POPUNDER_URL  = "";   // optional: opens once per session on a real user click
+/* ================================================================= */
+
+// Fill placeholder labels
+document.querySelectorAll('.slot[data-ad]').forEach(function(el){
+  el.innerHTML = '<b>' + el.getAttribute('data-ad') + '</b>Paste Adsterra code here.';
+});
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Smartlink buttons
+document.querySelectorAll('.smartlink').forEach(function(a){ if(SMARTLINK_URL) a.href = SMARTLINK_URL; });
+
+// Popunder: user-click only, once per session
+document.addEventListener('click', function(){
+  try{
+    if(POPUNDER_URL && !sessionStorage.getItem('pu')){
+      sessionStorage.setItem('pu','1');
+      window.open(POPUNDER_URL,'_blank','noopener');
+    }
+  }catch(e){}
+});
+
+// ===================== AUTO EVENT ENGINE =====================
+// Picks the best upcoming/live event by itself, runs the countdown, and when
+// the event ends it automatically moves to the next best one. No server needed.
+// To add your own event, push an object to EXTRA_EVENTS (see example below).
+(function(){
+  var EXTRA_EVENTS = [
+    // { id:'my-sale', name:'My Big Sale', emoji:'🎉', p:8, live:2, date:'2027-03-15',
+    //   title:'My Big Sale: What to Buy', blurb:'Short intro text.', secTitle:'My Sale Guide',
+    //   secIntro:'Intro for the guide section.', tipsTitle:'Top Tips', tips:['Tip 1','Tip 2'] }
+  ];
+
+  function nth(y,m,dow,n){
+    var d;
+    if(n>0){ d=new Date(y,m,1); return new Date(y,m,1+(dow-d.getDay()+7)%7+7*(n-1)); }
+    d=new Date(y,m+1,0); return new Date(y,m+1,0-(d.getDay()-dow+7)%7);
+  }
+  function easter(y){
+    var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),
+        g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,
+        l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),
+        mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;
+    return new Date(y,mo-1,da);
+  }
+  function fixed(m,d){ return function(y){ return new Date(y,m,d); }; }
+  function table(t){ return function(y){ return t[y]?new Date(y,t[y][0],t[y][1]):null; }; }
+  function bf(y){ var t=nth(y,10,4,4); return new Date(y,10,t.getDate()+1); }
+
+  // p = importance (1-10), live = how many days the event stays "live"
+  var EVENTS = [
+    {id:'bf',name:'Black Friday',emoji:'🛒',p:10,live:3,date:bf,
+     title:'Black Friday {y}: How to Find Real Deals (Not Fake Discounts)',
+     blurb:'The biggest shopping weekend of the year. Compare prices, avoid fake "was" prices and stack savings before stock runs out.',
+     secTitle:'🛒 Black Friday Deal Guide',secIntro:'Major retailers start discounts weeks early and run them through Cyber Monday, so you can shop smart without rushing.',
+     tipsTitle:'What Usually Gets the Biggest Cuts',tips:['TVs and monitors','Laptops and tablets','Headphones and speakers','Smart home and robot vacuums','Older-generation phones and wearables'],
+     trend:'Black Friday deals: what\'s actually worth buying'},
+    {id:'cm',name:'Cyber Monday',emoji:'💻',p:8,live:1,date:function(y){var b=bf(y);return new Date(y,b.getMonth(),b.getDate()+3);},
+     title:'Cyber Monday {y}: Best Online Deals & How to Shop Safely',
+     blurb:'Online-only discounts on tech, software, subscriptions and gadgets. Here is how to pick real bargains and avoid scams.',
+     secTitle:'💻 Cyber Monday Guide',secIntro:'Cyber Monday focuses on online deals. Prices move fast, so decide your budget first.',
+     tipsTitle:'Popular Cyber Monday Categories',tips:['Laptops, PC parts and accessories','Software and cloud storage plans','Streaming and VPN subscriptions','Gaming gear and consoles','Smart speakers and cameras'],
+     trend:'Cyber Monday: best online deals and safety tips'},
+    {id:'tg',name:'Thanksgiving',emoji:'🦃',p:5,live:1,date:function(y){return nth(y,10,4,4);},
+     title:'Thanksgiving {y}: Travel, Cooking & Early Deal Tips',
+     blurb:'Plan your travel, cook without stress and catch the first wave of holiday sales.',
+     secTitle:'🦃 Thanksgiving Guide',secIntro:'Simple planning tips for the long weekend.',
+     tipsTitle:'Thanksgiving Checklist',tips:['Confirm travel and airport timing early','Thaw the turkey 1 day per 4–5 lb in the fridge','Plan a make-ahead menu','Check early Black Friday offers','Set a gift budget now'],
+     trend:'Thanksgiving planning and early deals'},
+    {id:'sd',name:"Singles' Day",emoji:'🛍️',p:6,live:1,date:fixed(10,11),
+     title:"Singles' Day {y} (11.11): Shopping Tips & Deals",
+     blurb:'One of the largest online shopping events in the world. Learn how to compare prices and protect yourself from scams.',
+     secTitle:"🛍️ Singles' Day Guide",secIntro:'Big discounts show up across many online stores on 11.11.',
+     tipsTitle:'Smart 11.11 Shopping',tips:['Add items to your cart days before','Compare coupons and bundle offers','Check seller ratings and shipping time','Use secure payment methods only'],
+     trend:"Singles' Day (11.11) deals"},
+    {id:'xmas',name:'Christmas',emoji:'🎄',p:9,live:1,date:fixed(11,25),
+     title:'Christmas {y}: Gift Ideas, Budget Tips & Last-Minute Deals',
+     blurb:'Find thoughtful gifts without overspending, and learn what to order before shipping cut-offs.',
+     secTitle:'🎄 Christmas Gift Guide',secIntro:'Plan gifts, budget and delivery dates so nothing is last minute.',
+     tipsTitle:'Easy Gift Categories',tips:['Tech gadgets and accessories','Smart-home starter kits','Fitness and wellness gear','Gift cards and subscriptions','Experiences and local activities'],
+     trend:'Christmas gift ideas and last-minute deals'},
+    {id:'ny',name:'New Year',emoji:'🎆',p:7,live:1,date:fixed(0,1),
+     title:'New Year {y}: Goals, Budgets & Digital Clean-Up',
+     blurb:'Start the year organised: set realistic goals, review subscriptions and secure your accounts.',
+     secTitle:'🎆 New Year Reset Guide',secIntro:'A fresh start for your money, devices and habits.',
+     tipsTitle:'New Year Reset Checklist',tips:['Review and cancel unused subscriptions','Back up phone and computer','Update passwords and turn on 2FA','Set a monthly budget','Pick 1–3 goals, not 10'],
+     trend:'New Year reset: budget, goals and security'},
+    {id:'vd',name:"Valentine's Day",emoji:'💝',p:7,live:1,date:fixed(1,14),
+     title:"Valentine's Day {y}: Gift Ideas & Budget Plans",
+     blurb:'Thoughtful gifts and date ideas for every budget, plus tips to avoid fake online shops.',
+     secTitle:"💝 Valentine's Day Guide",secIntro:'Order early to avoid shipping delays.',
+     tipsTitle:'Gift & Date Ideas',tips:['Personalised gifts (order early)','Experience gifts: dinner, class, trip','Small tech gifts: earbuds, e-reader','Handwritten note plus a small treat'],
+     trend:"Valentine's Day gift ideas"},
+    {id:'cny',name:'Chinese New Year',emoji:'🧧',p:4,live:2,date:table({2027:[1,6],2028:[0,26],2029:[1,13],2030:[1,3]}),
+     title:'Chinese New Year {y}: Travel, Gifts & Celebration Tips',
+     blurb:'Plan travel, gifts and celebrations for the Lunar New Year season.',
+     secTitle:'🧧 Lunar New Year Guide',secIntro:'Book travel early and plan gifts in advance.',
+     tipsTitle:'Lunar New Year Tips',tips:['Book transport early','Prepare red-envelope gifts','Plan family meals ahead','Check store opening hours'],
+     trend:'Lunar New Year travel and gift tips'},
+    {id:'easter',name:'Easter',emoji:'🐣',p:5,live:1,date:easter,
+     title:'Easter {y}: Family Plans, Travel & Spring Deals',
+     blurb:'Spring sales, travel and family activities for the Easter weekend.',
+     secTitle:'🐣 Easter Guide',secIntro:'Simple ideas and deals for the long weekend.',
+     tipsTitle:'Easter Weekend Ideas',tips:['Book travel and tables early','Spring cleaning supplies on sale','Family activities and crafts','Check spring fashion sales'],
+     trend:'Easter weekend plans and spring deals'},
+    {id:'mom',name:"Mother's Day",emoji:'💐',p:6,live:1,date:function(y){return nth(y,4,0,2);},
+     title:"Mother's Day {y}: Gift Ideas She'll Actually Use",
+     blurb:'Practical and personal gifts, with delivery tips so they arrive on time.',
+     secTitle:"💐 Mother's Day Guide",secIntro:'Choose gifts early and confirm delivery dates.',
+     tipsTitle:'Gift Ideas',tips:['Personalised photo or book gifts','Wellness and spa items','Kitchen and home upgrades','Experience gifts and brunch','Handwritten card'],
+     trend:"Mother's Day gift ideas"},
+    {id:'mem',name:'Memorial Day Sales',emoji:'🏷️',p:4,live:1,date:function(y){return nth(y,4,1,-1);},
+     title:'Memorial Day {y} Sales: Best Things to Buy',
+     blurb:'Spring-to-summer sales on mattresses, appliances, outdoor gear and more.',
+     secTitle:'🏷️ Memorial Day Sales Guide',secIntro:'Compare offers across stores before buying.',
+     tipsTitle:'Popular Categories',tips:['Mattresses and bedding','Appliances','Grills and outdoor furniture','TVs and home audio'],
+     trend:'Memorial Day sales worth checking'},
+    {id:'dad',name:"Father's Day",emoji:'👔',p:5,live:1,date:function(y){return nth(y,5,0,3);},
+     title:"Father's Day {y}: Gift Ideas for Every Budget",
+     blurb:'Useful gadgets, tools and experiences he will enjoy.',
+     secTitle:"👔 Father's Day Guide",secIntro:'Pick a gift based on his hobbies.',
+     tipsTitle:'Gift Ideas',tips:['Headphones and speakers','Tools and DIY kits','Grilling accessories','Fitness trackers','Experiences: games, sports, trips'],
+     trend:"Father's Day gift ideas"},
+    {id:'j4',name:'4th of July Sales',emoji:'🎇',p:4,live:1,date:fixed(6,4),
+     title:'4th of July {y} Sales: What to Buy & What to Skip',
+     blurb:'Summer sales on outdoor gear, TVs and appliances.',
+     secTitle:'🎇 4th of July Sales Guide',secIntro:'Plan purchases before the holiday weekend.',
+     tipsTitle:'Popular Categories',tips:['Outdoor and patio items','TVs and soundbars','Fans and air coolers','Travel gear'],
+     trend:'4th of July sales guide'},
+    {id:'bts',name:'Back-to-School',emoji:'🎒',p:5,live:31,date:fixed(7,1),
+     title:'Back-to-School {y}: Laptops, Gear & Savings Tips',
+     blurb:'Student laptops, backpacks and supplies, plus tips to save without cutting quality.',
+     secTitle:'🎒 Back-to-School Guide',secIntro:'Make a list first, then compare prices and student discounts.',
+     tipsTitle:'Student Essentials',tips:['Laptop or tablet with student discount','Backpack and supplies','Headphones for study','Cloud storage and software deals'],
+     trend:'Back-to-school deals and student discounts'},
+    {id:'lab',name:'Labor Day Sales',emoji:'🛠️',p:4,live:1,date:function(y){return nth(y,8,1,1);},
+     title:'Labor Day {y} Sales: Best Categories to Shop',
+     blurb:'End-of-summer discounts on appliances, furniture and outdoor gear.',
+     secTitle:'🛠️ Labor Day Sales Guide',secIntro:'A good time to buy large household items.',
+     tipsTitle:'Popular Categories',tips:['Appliances','Furniture and mattresses','Grills and patio','Fall clothing'],
+     trend:'Labor Day sales guide'},
+    {id:'hal',name:'Halloween',emoji:'🎃',p:5,live:1,date:fixed(9,31),
+     title:'Halloween {y}: Costume, Decor & Safety Tips',
+     blurb:'Budget-friendly costumes and decorations, plus safe trick-or-treating tips.',
+     secTitle:'🎃 Halloween Guide',secIntro:'Order early for the best selection.',
+     tipsTitle:'Halloween Checklist',tips:['DIY costumes to save money','Reflective gear for kids','LED lights and smart decor','Candy budget plan'],
+     trend:'Halloween costume and decor ideas'},
+    {id:'diw',name:'Diwali',emoji:'🪔',p:6,live:1,date:table({2026:[10,8],2027:[9,29],2028:[9,17],2029:[10,5],2030:[9,26]}),
+     title:'Diwali {y}: Gifts, Decor & Festive Sale Tips',
+     blurb:'Festival-of-lights gift ideas, home decor and tips to spot genuine festive discounts.',
+     secTitle:'🪔 Diwali Guide',secIntro:'Compare festive offers and shop from trusted sellers.',
+     tipsTitle:'Festive Shopping Tips',tips:['Gift ideas: sweets, decor, gadgets','Compare prices across sites','Check return policy on festive offers','Beware of fake sale links on messages'],
+     trend:'Diwali gifts and festive sale tips'}
+  ];
+
+  function day0(d){ return new Date(d.getFullYear(),d.getMonth(),d.getDate()); }
+  function addDays(d,n){ return new Date(d.getFullYear(),d.getMonth(),d.getDate()+n); }
+  function occurrences(now){
+    var y=now.getFullYear(), out=[];
+    EVENTS.forEach(function(e){
+      for(var k=y-1;k<=y+1;k++){
+        var s=e.date(k); if(!s) continue; s=day0(s);
+        out.push({e:e,start:s,end:addDays(s,e.live),year:k});
+      }
+    });
+    EXTRA_EVENTS.forEach(function(x){
+      var s=day0(new Date(x.date+'T00:00:00'));
+      out.push({e:x,start:s,end:addDays(s,x.live||1),year:s.getFullYear()});
+    });
+    return out;
+  }
+  // Best event = live event first, else highest importance / closeness score
+  function pick(now){
+    var best=null,bs=-1;
+    occurrences(now).forEach(function(o){
+      if(now>=o.end) return;
+      var live=now>=o.start, score;
+      if(live) score=100+o.e.p;
+      else { var days=(o.start-now)/864e5; score=o.e.p/(days+7); }
+      if(score>bs){ bs=score; best={e:o.e,start:o.start,end:o.end,year:o.year,live:live}; }
+    });
+    return best;
+  }
+  if(typeof window!=='undefined') window.__pickEvent=pick;
+
+  function $(id){ return document.getElementById(id); }
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function fill(o){
+    var e=o.e, y=o.year;
+    var dateStr=o.start.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    $('ev-badge').textContent=(o.live?'Live now':'Coming up')+' · '+e.name;
+    $('ev-title').textContent=e.title.replace('{y}',y);
+    $('ev-blurb').textContent=e.blurb;
+    $('ev-sec-title').textContent=e.secTitle;
+    $('ev-sec-intro').textContent=e.secIntro;
+    $('ev-tips-title').textContent=e.tipsTitle;
+    $('ev-tips').innerHTML=e.tips.map(function(t){return '<li></li>';}).join('');
+    var lis=$('ev-tips').children; e.tips.forEach(function(t,i){ lis[i].textContent=t; });
+    $('ev-trend').textContent=e.trend;
+    $('ticker').textContent=(e.emoji||'🔥')+' '+e.name+(o.live?' is LIVE now':' is on '+dateStr)+' – see our guide below';
+    $('cd-note').textContent=o.live?(e.name+' is live now. Check our guide below.'):('Countdown to '+e.name+' ('+dateStr+').');
+    $('countdown').style.display=o.live?'none':'';
+    document.title=e.name+' Guide – TrendNova Daily';
+  }
+  var shown='';
+  function tick(){
+    var now=new Date(), o=pick(now);
+    if(!o) return;
+    window.__curEv=o.e.name;
+    var key=o.e.id+o.year+(o.live?'L':'U');
+    if(key!==shown){ shown=key; fill(o); }
+    if(!o.live){
+      var d=Math.max(0,o.start-now);
+      $('cd-d').textContent=pad(Math.floor(d/864e5));
+      $('cd-h').textContent=pad(Math.floor(d%864e5/36e5));
+      $('cd-m').textContent=pad(Math.floor(d%36e5/6e4));
+      $('cd-s').textContent=pad(Math.floor(d%6e4/1e3));
+    }
+  }
+  if(typeof document!=='undefined' && $('countdown')){ tick(); setInterval(tick,1000); }
+})();
+
+// ===================== LIVE DEALS + HEADLINES RENDERER =====================
+// Reads data/live.json (refreshed automatically by GitHub Actions) and shows it.
+(function(){
+  var TRUST=['slickdeals.net','9to5toys.com','9to5mac.com','dealnews.com','theverge.com','engadget.com','techcrunch.com','bbc.co.uk','bbc.com','bleepingcomputer.com','thehackernews.com','krebsonsecurity.com','arstechnica.com','wired.com','cnet.com','techradar.com','amazon.com','bestbuy.com','walmart.com','target.com','newegg.com','apple.com','samsung.com','dell.com','hp.com','lenovo.com','microsoft.com','ebay.com','costco.com','google.com'];
+  function host(u){ try{ return new URL(u).hostname.toLowerCase().replace(/^www\./,''); }catch(e){ return ''; } }
+  function ok(u){ var h=host(u); if(!/^https?:/i.test(u)) return false; return TRUST.some(function(d){ return h===d || h.slice(-(d.length+1))==='.'+d; }); }
+  function ago(iso){
+    if(!iso) return '';
+    var s=(Date.now()-new Date(iso).getTime())/1000;
+    if(isNaN(s)||s<0) return '';
+    if(s<3600) return Math.max(1,Math.floor(s/60))+'m ago';
+    if(s<86400) return Math.floor(s/3600)+'h ago';
+    return Math.floor(s/86400)+'d ago';
+  }
+  function el(tag,cls,text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e; }
+  function card(title,items,sponsored){
+    var c=el('div','lv-card'); c.appendChild(el('h3',null,title));
+    var ul=el('ul');
+    items.forEach(function(it){
+      var li=el('li'), a=el('a',null,it.title);
+      a.href=it.link; a.target='_blank';
+      a.rel='nofollow noopener noreferrer'+(sponsored?' sponsored':'');
+      li.appendChild(a);
+      var meta=it.source; var t=ago(it.date); if(t) meta+=' · '+t; meta+=' · ✓ trusted source';
+      li.appendChild(el('small',null,meta));
+      ul.appendChild(li);
+    });
+    c.appendChild(ul); return c;
+  }
+  function boost(items){
+    var name=(window.__curEv||'').toLowerCase().replace(/[^a-z0-9 ]/g,'');
+    var words=name.split(' ').filter(function(w){ return w.length>3 && w!=='sales' && w!=='live'; });
+    function score(it){
+      var t=it.title.toLowerCase(), s=0;
+      words.forEach(function(w){ if(t.indexOf(w)>-1) s+=2; });
+      if(/deal|sale|% off|save|discount|\$\d/.test(t)) s+=1;
+      return s;
+    }
+    return items.map(function(it,i){ return {it:it,s:score(it),i:i}; })
+      .sort(function(a,b){ return b.s-a.s || a.i-b.i; }).map(function(x){ return x.it; });
+  }
+  function clean(list){ return (list||[]).filter(function(it){ return it&&it.title&&it.link&&ok(it.link); }); }
+
+  function render(d){
+    var deals=boost(clean(d.deals)), tech=clean(d.tech), ai=clean(d.ai), sec=clean(d.security), tr=clean(d.trends);
+    var sub=document.getElementById('live-sub'), g1=document.getElementById('lv-deals'), g2=document.getElementById('lv-news');
+    if(!deals.length && !tech.length && !ai.length && !sec.length && !tr.length){
+      sub.textContent='Live feed is warming up. Check back soon.'; return;
+    }
+    var ev=window.__curEv ? ' · matched to '+window.__curEv : '';
+    sub.textContent='Fresh offers and headlines from trusted sources'+ev+'.';
+    g1.textContent=''; g2.textContent='';
+    if(deals.length) g1.appendChild(card('🛒 Fresh Deals',deals.slice(0,8),true));
+    if(deals.length>8) g1.appendChild(card('💸 More Offers',deals.slice(8,16),true));
+    if(tech.length) g2.appendChild(card('📱 Tech & Gadgets',tech.slice(0,7)));
+    if(ai.length) g2.appendChild(card('🤖 AI News',ai.slice(0,7)));
+    if(sec.length) g2.appendChild(card('🔐 Security Alerts',sec.slice(0,7)));
+    if(tr.length){
+      var c=el('div','lv-card'); c.appendChild(el('h3',null,'📈 Trending Searches (US)'));
+      var chips=el('div','chips');
+      tr.slice(0,12).forEach(function(it){
+        var a=el('a','chip',it.title); a.href=it.link; a.target='_blank'; a.rel='nofollow noopener noreferrer';
+        chips.appendChild(a);
+      });
+      c.appendChild(chips); g2.appendChild(c);
+    }
+    var t=document.getElementById('lv-time');
+    if(d.generated){ var a=ago(d.generated); t.textContent='Last updated: '+(a||new Date(d.generated).toLocaleString())+' · Auto-refreshed every few hours. Links open the original publisher or store.'; }
+  }
+  function load(){
+    fetch('data/live.json?v='+Math.floor(Date.now()/600000),{cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(render)
+      .catch(function(){ var s=document.getElementById('live-sub'); if(s) s.textContent='Live offers will appear here once the auto-updater has run.'; });
+  }
+  if(typeof document!=='undefined' && document.getElementById('live-sub')){
+    setTimeout(load,300);              // wait for the event engine to pick the current event
+    setInterval(load,15*60*1000);      // re-read every 15 minutes while the page is open
+  }
+  if(typeof window!=='undefined') window.__renderLive=render;
+})();
+</script>
+</body>
+</html>
