@@ -72,6 +72,8 @@ footer a{margin:0 8px}
 .lv-card small{color:var(--muted);font-size:12px}
 .lv-time{font-size:12px;color:var(--muted);margin-top:10px}
 @media(max-width:700px){.lv-grid{grid-template-columns:1fr}}
+.adbox{display:flex;justify-content:center;align-items:center;max-width:100%}
+.sidebar .adbox{margin:0}
 </style>
 </head>
 <body>
@@ -89,7 +91,7 @@ footer a{margin:0 8px}
 <main class="wrap">
 
   <!-- AD 1: TOP BANNER -->
-  <div class="sc"><div class="slot s728" data-ad="Top Banner 728×90 / 320×50" id="ad-top"></div></div>
+  <div class="sc"><div class="adbox" id="ad-top" data-units="728x90|(min-width:760px),320x50|(max-width:759px)"></div></div>
 
   <!-- HERO -->
   <div class="hero">
@@ -120,12 +122,11 @@ footer a{margin:0 8px}
         <li><a href="#money">Smart holiday budgeting tips</a></li>
       </ol>
       <!-- AD 2: NATIVE HERO -->
-      <div class="slot native" style="margin-top:14px" data-ad="Native Banner (above the fold)" id="ad-native-hero"></div>
+      <div class="nativebox" style="margin-top:14px;min-height:110px"><script async fetchpriority="high" data-cfasync="false" src="https://bauval.org/21/ead0ac6eaf569fde61d41201d9db7607"></script><div id="container-ead0ac6eaf569fde61d41201d9db7607"></div></div>
     </div>
   </div>
 
   <!-- AD 3: MID BANNER -->
-  <div class="sc"><div class="slot s728" data-ad="Banner 728×90 / 320×50" id="ad-mid1"></div></div>
 
   <div class="layout">
     <div>
@@ -134,9 +135,7 @@ footer a{margin:0 8px}
         <h2>🔥 Live Deals &amp; Trending Now</h2>
         <p id="live-sub">Loading the latest offers…</p>
         <div class="lv-grid" id="lv-deals"></div>
-        <div class="slot native" style="margin-top:14px" data-ad="Live Section Native 1" id="ad-live-1"></div>
         <div class="lv-grid" id="lv-news"></div>
-        <div class="slot native" style="margin-top:14px" data-ad="Live Section Native 2" id="ad-live-2"></div>
         <div class="lv-time" id="lv-time"></div>
       </section>
 
@@ -167,7 +166,6 @@ footer a{margin:0 8px}
               <li>Older-generation phones and wearables</li>
             </ul>
           </div>
-          <div class="slot native full" data-ad="In-Feed Native 1" id="ad-feed1"></div>
           <div class="card full">
             <span class="cat">Money-saving</span>
             <h3>Stack Your Savings the Smart Way</h3>
@@ -177,7 +175,7 @@ footer a{margin:0 8px}
         </div>
       </section>
 
-      <div class="sc"><div class="slot s300" data-ad="Banner 300×250" id="ad-300a"></div></div>
+      <div class="sc"><div class="adbox" id="ad-300a" data-units="300x250|(max-width:980px)"></div></div>
 
       <!-- ================= AI ================= -->
       <section class="block" id="ai">
@@ -207,7 +205,7 @@ footer a{margin:0 8px}
         </div>
       </section>
 
-      <div class="sc"><div class="slot s468" data-ad="Banner 468×60" id="ad-468a"></div></div>
+      <div class="sc"><div class="adbox" id="ad-468a" data-units="468x60|(min-width:560px)"></div></div>
 
       <!-- ================= GADGETS ================= -->
       <section class="block" id="gadgets">
@@ -229,14 +227,9 @@ footer a{margin:0 8px}
             <h3>Why "Matter" Support Matters</h3>
             <p>Matter-compatible devices work across major smart-home platforms, so you're less locked into one brand. Look for the Matter logo when buying plugs, lights and sensors.</p>
           </div>
-          <div class="slot native full" data-ad="In-Feed Native 2" id="ad-feed2"></div>
         </div>
       </section>
 
-      <div class="cards" style="margin-top:14px">
-        <div class="sc" style="margin:0"><div class="slot s300" data-ad="Banner 300×250 B" id="ad-300b"></div></div>
-        <div class="sc" style="margin:0"><div class="slot s300" data-ad="Banner 300×250 C" id="ad-300c"></div></div>
-      </div>
 
       <!-- ================= GAMING ================= -->
       <section class="block" id="gaming">
@@ -260,7 +253,6 @@ footer a{margin:0 8px}
         </div>
       </section>
 
-      <div class="sc"><div class="slot s728" data-ad="Banner 728×90 / 320×50 (mid 2)" id="ad-mid2"></div></div>
 
       <!-- ================= STREAMING ================= -->
       <section class="block" id="streaming">
@@ -309,7 +301,6 @@ footer a{margin:0 8px}
               <li>Misspelled domains and missing contact info.</li>
             </ul>
           </div>
-          <div class="slot native full" data-ad="In-Feed Native 3" id="ad-feed3"></div>
           <div class="card full">
             <span class="cat">VPN</span>
             <h3>Do You Need a VPN on Public Wi-Fi?</h3>
@@ -318,7 +309,6 @@ footer a{margin:0 8px}
         </div>
       </section>
 
-      <div class="sc"><div class="slot s468" data-ad="Banner 468×60 B" id="ad-468b"></div></div>
 
       <!-- ================= MONEY ================= -->
       <section class="block" id="money">
@@ -343,32 +333,22 @@ footer a{margin:0 8px}
         <p style="font-size:12px;margin-top:10px">This content is for general information only and is not financial advice.</p>
       </section>
 
-      <!-- AD FORMAT SHOWCASE -->
       <section class="block panel" id="partners">
-        <h2>Partner Offers</h2>
-        <p>Sponsored placements. Paste your Adsterra code into each slot.</p>
-        <div class="fmtgrid">
-          <div class="slot" style="min-height:110px" data-ad="Popunder trigger (fires on user click)" id="ad-popunder"></div>
-          <div class="slot" style="min-height:110px" data-ad="Native Banner" id="ad-native-partner"></div>
-          <div class="slot" style="min-height:110px" data-ad="Social Bar (inline backup)" id="ad-social-inline"></div>
-          <div class="slot" style="min-height:110px"><b>Smartlink</b><a class="btn smartlink" href="#" target="_blank" rel="noopener sponsored">Open Offer</a></div>
-        </div>
+        <h2>Recommended Offers</h2>
+        <p>Sponsored link. We may earn a commission from partners at no extra cost to you.</p>
+        <div class="cta"><a class="btn smartlink" href="#" target="_blank" rel="noopener sponsored">Open Recommended Offer</a></div>
       </section>
     </div>
 
     <!-- ================= SIDEBAR ================= -->
     <aside class="sidebar">
-      <div class="slot s300" data-ad="Sidebar 300×250" id="ad-side-300"></div>
-      <div class="slot s300x600" data-ad="Sidebar 300×600" id="ad-side-600"></div>
-      <div class="slot s160x600" data-ad="160×600" id="ad-160x600"></div>
-      <div class="slot s160x300" data-ad="160×300" id="ad-160x300"></div>
-      <div class="sticky-side"><div class="slot s300" data-ad="Sticky Sidebar 300×250" id="ad-side-sticky"></div></div>
+      <div class="adbox" id="ad-160x600" data-units="160x600|(min-width:981px)"></div>
+      <div class="adbox" id="ad-160x300" data-units="160x300|(min-width:981px)"></div>
+      <div class="sticky-side"><div class="adbox" id="ad-side-sticky" data-units="300x250|(min-width:981px)"></div></div>
     </aside>
   </div>
 
   <!-- BOTTOM ADS -->
-  <div class="sc"><div class="slot s728" data-ad="Bottom Banner 728×90 / 320×50" id="ad-bottom"></div></div>
-  <div class="slot native" data-ad="Bottom Native Banner" id="ad-native-bottom"></div>
 
 </main>
 
@@ -377,12 +357,10 @@ footer a{margin:0 8px}
   <p style="margin-top:8px">© <span id="yr"></span> TrendNova Daily. Contains advertisements and affiliate links. Information is general in nature; check dates and prices with retailers.</p>
 </footer>
 
-<!-- STICKY SOCIAL BAR -->
-<div class="stickybar" id="ad-sticky-social">Sticky Social Bar container – paste script here</div>
 
 <script>
 /* ============ CONFIG: put your Adsterra values here ============ */
-var SMARTLINK_URL = "";   // your Smartlink URL
+var SMARTLINK_URL = "https://araplhn.org/4/37ffb468137f0ef74279064e3134a19b";   // your Smartlink URL
 var POPUNDER_URL  = "";   // optional: opens once per session on a real user click
 /* ================================================================= */
 
@@ -687,6 +665,63 @@ document.addEventListener('click', function(){
   }
   if(typeof window!=='undefined') window.__renderLive=render;
 })();
+
+// ===================== AD LOADER (lazy, size-aware, isolated) =====================
+// Each banner unit is loaded inside its own iframe, so the "atOptions" of one
+// banner never clashes with another. Ads load only when the slot is near the
+// screen and only for the viewport size they are made for.
+(function(){
+  var UNITS={
+    '728x90': {key:'5caea92bbedef80bc868df4628c49edf',w:728,h:90},
+    '468x60': {key:'5646495d707f4b03197ef1416be4ddd8',w:468,h:60},
+    '320x50': {key:'bb800ab7a9691d2b4f37d16af234f282',w:320,h:50},
+    '300x250':{key:'7abda7adab3197a24ee67b6c9cb88502',w:300,h:250},
+    '160x300':{key:'1c37fd3f543e48e7621a8a76a4a0fa5d',w:160,h:300},
+    '160x600':{key:'4829ff37d194ed36c2f9fbc70f4b23b2',w:160,h:600}
+  };
+  var CLOSE='<'+'/script>';
+  function srcdoc(u){
+    return '<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;padding:0;background:transparent}</style></head><body>'
+      +'<script>atOptions={\'key\':\''+u.key+'\',\'format\':\'iframe\',\'height\':'+u.h+',\'width\':'+u.w+',\'params\':{}};'+CLOSE
+      +'<script data-cfasync="false" src="https://bauval.org/22/'+u.key+'">'+CLOSE
+      +'</body></html>';
+  }
+  function choose(box){
+    var list=(box.getAttribute('data-units')||'').split(',');
+    for(var i=0;i<list.length;i++){
+      var p=list[i].split('|'), u=UNITS[p[0]];
+      if(u && (!p[1] || window.matchMedia(p[1]).matches)) return u;
+    }
+    return null;
+  }
+  function load(box,u){
+    if(box.getAttribute('data-loaded')) return;
+    box.setAttribute('data-loaded','1');
+    var f=document.createElement('iframe');
+    f.width=u.w; f.height=u.h; f.setAttribute('frameborder','0'); f.setAttribute('scrolling','no');
+    f.style.border='0'; f.style.display='block'; f.style.maxWidth='100%';
+    f.setAttribute('title','Advertisement');
+    f.srcdoc=srcdoc(u);
+    box.appendChild(f);
+  }
+  function init(){
+    var boxes=document.querySelectorAll('.adbox[data-units]');
+    var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ io.unobserve(e.target); load(e.target,e.target.__u); } });
+    },{rootMargin:'300px'}):null;
+    Array.prototype.forEach.call(boxes,function(box){
+      var u=choose(box);
+      if(!u){ box.style.display='none'; return; }
+      box.style.minHeight=u.h+'px'; box.style.minWidth=Math.min(u.w,320)+'px'; box.__u=u;
+      if(io) io.observe(box); else load(box,u);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
 </script>
+<!-- Social Bar -->
+<script data-cfasync="false" src="https://bauval.org/14/9c7bd6fac6fa9b319d345d0ca80c7035"></script>
+<!-- Popunder -->
+<script data-cfasync="false" src="https://abscloud.org/1/76bcb0ff9804a0bfa6f09523e5dcc4c9"></script>
 </body>
 </html>
